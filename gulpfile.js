@@ -188,7 +188,7 @@ function svgsprite() {
                             { removeEmptyAttrs: true },
                             { removeEmptyText: true },
                             { collapseGroups: true },
-                            { removeAttrs: { attrs: '(fill|stroke|style)' } }
+                            // { removeAttrs: { attrs: '(fill|stroke|style)' } }
                         ]
                     }
                 }]

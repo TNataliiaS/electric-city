@@ -1,0 +1,41 @@
+.contacts {
+    &__link {
+        display: inline-block;
+
+        position: relative;
+
+        &--phone,
+        &--mail {
+            &:before {
+                content: "";
+                display: block;
+
+                background-repeat: no-repeat;
+
+                position: absolute;
+                top: 50%;
+                left: 0;
+
+                transform: translateY(-50%);
+            }
+        }
+
+        &--phone {
+            &:before {
+                width: 18px;
+                height: 18px;
+
+                background-image: url(../images/phone.svg);
+            }
+        }
+
+        &--mail {
+            &:before {
+                width: 25px;
+                height: 17px;
+
+                background-image: url(../images/envelope.svg);
+            }
+        }
+    }
+}

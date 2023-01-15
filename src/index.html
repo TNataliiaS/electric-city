@@ -16,22 +16,22 @@
     <header class="header">
         <div class="header__location-wrapper">
             <div class="container">
-                <div class="header__location">
+                <div class="header__location contacts">
                     <button class="header__location-item header__city" type="button">
-                        <svg class="header__location-icon header__pin">
+                        <svg class="header__location-icon">
                             <use href="./assets/images/sprite/sprite.svg#pin"></use>
                         </svg>
                         <span>г. Рязань</span>
                     </button>
 
                     <a class="header__location-item" href="#" target="_blank">
-                        <svg class="header__location-icon header__shop-icon">
+                        <svg class="header__location-icon">
                             <use href="./assets/images/sprite/sprite.svg#shop-icon"></use>
                         </svg>
                         <span>Магазины</span>
                     </a>
 
-                    <a class="header__phone" href="tel:88000000000">8 (800) 000 00 00</a>
+                    <a class="header__phone contacts__link contacts__link--phone" href="tel:88000000000">8 (800) 000 00 00</a>
                 </div>
             </div><!-- /.container -->
         </div><!-- /.header__location-wrapper -->
@@ -95,7 +95,7 @@
             <nav class="site-nav swiper">
                 <ul class="site-nav__list swiper-wrapper">
                     <li class="site-nav__item swiper-slide">
-                        <a class="site-nav__link site-nav__link--active site-nav__link--pomotions" href="#">Акции</a>
+                        <a class="site-nav__link site-nav__link--active site-nav__link--promotion" href="#">Акции</a>
                     </li>
 
                     <li class="site-nav__item swiper-slide">
@@ -163,6 +163,7 @@
     <main>
         <h1 class="visually-hidden">Акции магазина электроники - ЭЛЕКТРОСИТИ</h1>
 
+        <!-- Promotions -->
         <section class="promotions">
             <div class="container">
                 <h2 class="promotions__title">Акции</h2>
@@ -252,6 +253,71 @@
         </section>
     </main>
 
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item">
+                        <a href="#">Главная</a>
+                    </li>
+
+                    <li class="footer__nav-item">
+                        <a href="#">Акции</a>
+                    </li>
+
+                    <li class="footer__nav-item">
+                        <a href="#">Магазины</a>
+                    </li>
+
+                    <li class="footer__nav-item">
+                        <a href="#">Профиль</a>
+                    </li>
+                </ul>
+
+                <ul class="footer__contacts contacts">
+                    <li class="footer__contacts-item">
+                        <a class="footer__contacts-phone contacts__link contacts__link--phone" href="tel:88000000000">8 (800) 000 00 00</a>
+                    </li>
+
+                    <li class="footer__contacts-item">
+                        <a class="footer__contacts-mail contacts__link contacts__link--mail" href="mailto:electrocity.ru">electrocity.ru</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="footer__inner">
+                <p class="footer__copyright">© 2014-2021 <span>«ЭЛЕКТРОСИТИ»</span>. Все права защищены</p>
+
+                <ul class="footer__social social">
+                    <li class="social__item">
+                        <a class="social__link" href="#" target="_blank">
+                            <svg class="social__icon">
+                                <use href="./assets/images/sprite/sprite.svg#vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="social__item">
+                        <a class="social__link" href="#" target="_blank">
+                            <svg class="social__icon">
+                                <use href="./assets/images/sprite/sprite.svg#youtube"></use>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="social__item">
+                        <a class="social__link" href="#" target="_blank">
+                            <svg class="social__icon">
+                                <use href="./assets/images/sprite/sprite.svg#telegram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- /.footer__inner -->
+        </div><!-- /.container -->
+    </footer>
 </div><!-- /.page -->
 
 <!-- JS -->

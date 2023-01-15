@@ -28,7 +28,8 @@
                width: 18px;
                height: 18px;
 
-               background: url(../images/promotion.svg) center no-repeat;
+               background-image: url(../images/promotion.svg);
+               background-repeat: no-repeat;
 
                position: absolute;
                top: 0;
@@ -49,8 +50,6 @@
             background: $primary-color;
             border: none;
             cursor: pointer;
-            fill: none;
-            stroke: $content-color-second;
 
             position: absolute;
             top: 50%;

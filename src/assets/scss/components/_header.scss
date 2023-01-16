@@ -1,15 +1,52 @@
 .header {
     &__location-wrapper {
         border-bottom: 2px solid #E8E8E8;
+
+        @include breakpoint($breakpoint-sm) {
+            border: none;
+        }
     }
 
     &__location {
         @extend %flex-align-center;
         height: 35px;
+
+        @include breakpoint($breakpoint-xl) {
+            padding-top: 3px;
+            height: 33px;
+        }
+
+        @include breakpoint($breakpoint-sm) {
+            padding-top: 2px;
+            margin-right: -3px;
+            height: 62px;
+            justify-content: flex-end;
+        }
     }
 
     &__location-item {
         @extend %flex-align-center;
+
+        &--city {
+            margin-right: 36px;
+            padding: 0;
+
+            background: none;
+            border: none;
+            cursor: pointer;
+
+            @include breakpoint($breakpoint-sm) {
+                margin-right: 0;
+                order: 2;
+            }
+        }
+
+        &--shop {
+            @include breakpoint($breakpoint-sm) {
+                margin-right: 21px;
+                order: 1;
+            }
+        }
     }
 
     &__location-icon {
@@ -17,15 +54,18 @@
         height: 18px;
         margin-right: 6px;
         flex-shrink: 0;
+
+        @include breakpoint($breakpoint-sm) {
+            margin-right: 0;
+            width: 24px;
+            height: 24px;
+        }
     }
 
-    &__city {
-        margin-right: 37px;
-        padding: 0;
-
-        background: none;
-        border: none;
-        cursor: pointer;
+    &__location-text {
+        @include breakpoint($breakpoint-sm) {
+            display: none;
+        }
     }
 
     &__phone {
@@ -33,14 +73,83 @@
         margin-left: auto;
         padding-left: 24px;
         padding-top: 4px;
+
+        @include breakpoint($breakpoint-xl) {
+            padding-top: 0;
+        }
+
+        @include breakpoint($breakpoint-sm) {
+            display: none;
+        }
     }
 
     &__actions {
         @extend %flex-align-center;
-        padding: 8px 0;
+        padding-top: 8px;
+        padding-bottom: 4px;
+
+        position: relative;
+
+        @include breakpoint($breakpoint-xl) {
+            padding-top: 9px;
+            padding-bottom: 8px;
+        }
+
+        @include breakpoint($breakpoint-sm) {
+            padding-bottom: 18px;
+        }
     }
 
     &__logo {
         margin-right: 12px;
+
+        @include breakpoint($breakpoint-md) {
+            margin-right: 0;
+        }
+
+        @include breakpoint($breakpoint-sm) {
+            position: absolute;
+            top: -56px;
+            left: 0;
+        }
+    }
+
+    &__search-form {
+        margin-top: -5px;
+
+        @include breakpoint($breakpoint-xl) {
+            flex-grow: 1;
+            margin-right: 12px;
+            margin-top: -3px;
+        }
+
+        @include breakpoint($breakpoint-lg) {
+            flex-grow: 0;
+        }
+
+        @include breakpoint($breakpoint-md) {
+            flex-grow: 1;
+        }
+
+        @include breakpoint($breakpoint-sm) {
+            margin-right: 0;
+        }
+    }
+
+    &__user-actions {
+        margin-left: auto;
+
+        @include breakpoint($breakpoint-xl) {
+            margin-bottom: 3px;
+            margin-right: 6px;
+        }
+
+        @include breakpoint($breakpoint-md) {
+            margin-right: 0;
+        }
+
+        @include breakpoint($breakpoint-xs) {
+            margin: 0;
+        }
     }
 }

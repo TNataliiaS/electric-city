@@ -3,9 +3,31 @@
     padding: 36px 0 18px;
     background-color: #F4F4F4;
 
+    position: relative;
+
+    @include breakpoint($breakpoint-lg) {
+        margin-bottom: 15px;
+    }
+
+    @include breakpoint($breakpoint-xs) {
+        padding-top: 25px;
+        margin-bottom: 0;
+    }
+
     &__nav {
         @extend %flex-align-center-sb;
-        margin-bottom: 42px;
+        margin-bottom: 41px;
+
+        @include breakpoint($breakpoint-lg) {
+            margin-bottom: 24px;
+
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 15px;
+        }
     }
 
     &__nav-list,
@@ -13,32 +35,87 @@
         @extend %flex-align-center;
     }
 
+    &__nav-list {
+        @include breakpoint($breakpoint-lg) {
+            margin-bottom: 23px;
+        }
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 17px;
+        }
+    }
+
     &__nav-item {
+        @include breakpoint($breakpoint-xs) {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
         &:not(:last-child) {
             margin-right: 62px;
+
+            @include breakpoint($breakpoint-lg) {
+                margin-right: 24px;
+            }
+
+            @include breakpoint($breakpoint-xs) {
+                margin-right: 25px;
+            }
         }
     }
 
     &__contacts {
         padding-top: 1px;
+
+        @include breakpoint($breakpoint-xs) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__contacts-item {
         &:not(:last-child) {
             margin-right: 62px;
+
+            @include breakpoint($breakpoint-lg) {
+                margin-right: 25px;
+            }
+
+            @include breakpoint($breakpoint-xs) {
+                margin-right: 0;
+                margin-bottom: 7px;
+            }
+        }
+
+        @include breakpoint($breakpoint-xs) {
+            font-size: 14px;
+            line-height: 1.6;
         }
     }
 
     &__contacts-phone {
-        padding-left: 28px;
+        padding-left: 29px;
+
+        @include breakpoint($breakpoint-xs) {
+            padding-left: 26px;
+        }
     }
 
     &__contacts-mail {
         padding-left: 34px;
+
+        @include breakpoint($breakpoint-xs) {
+            padding-left: 26px;
+        }
     }
 
     &__inner {
         @extend %flex-align-center-sb;
+
+        @include breakpoint($breakpoint-md) {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
     }
 
     &__copyright {
@@ -51,9 +128,26 @@
         span {
             text-transform: uppercase;
         }
+
+        @include breakpoint($breakpoint-xs) {
+            font-size: 12px;
+            line-height: 1.5;
+        }
     }
 
     &__social {
         margin-top: -4px;
+
+        @include breakpoint($breakpoint-lg) {
+            position: absolute;
+            top: 41px;
+            right: 20px;
+        }
+
+        @include breakpoint($breakpoint-md) {
+            margin-bottom: 24px;
+
+            position: static;
+        }
     }
 }

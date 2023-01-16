@@ -1,6 +1,15 @@
 .promotions {
     padding-top: 36px;
-    padding-bottom: 93px;
+    padding-bottom: 95px;
+
+    @include breakpoint($breakpoint-lg) {
+        padding-bottom: 71px;
+    }
+
+    @include breakpoint($breakpoint-xs) {
+        padding-top: 25px;
+        padding-bottom: 48px;
+    }
 
     &__title {
         margin-bottom: 36px;
@@ -8,20 +17,45 @@
         font-size: 36px;
         font-weight: 700;
         line-height: 1.15;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 24px;
+
+            font-size: 24px;
+        }
     }
 
     &__list {
         display: flex;
         flex-wrap: wrap;
-        column-gap: 33px;
-        row-gap: 34px;
+        gap: 34px;
+
+        @include breakpoint($breakpoint-lg) {
+            gap: 18px;
+        }
     }
 
     &__item {
-        flex-basis: calc((100% - (33px * 2)) / 3);
+        flex-basis: calc((100% - (34px * 2)) / 3);
 
         border-radius: 10px;
         box-shadow: 0px 6px 30px 4px rgba(32, 32, 32, 0.1);
+
+        @include breakpoint($breakpoint-lg) {
+            flex-basis: calc((100% - 18px) / 2);
+
+            &:not(:nth-child(6)) {
+                box-shadow: none;
+            }
+        }
+
+        @include breakpoint($breakpoint-xs) {
+            flex-basis: 100%;
+
+            &:nth-child(6) {
+                box-shadow: none;
+            }
+        }
     }
 
     &__item-img {

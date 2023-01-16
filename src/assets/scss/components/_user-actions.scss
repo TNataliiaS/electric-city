@@ -1,11 +1,31 @@
 .user-actions {
     @extend %flex-align-center;
-    margin-left: auto;
-    padding-top: 5px;
 
     &__item {
         &:not(:last-child) {
             margin-right: 25px;
+
+            @include breakpoint($breakpoint-xl) {
+                margin-right: 30px;
+            }
+        }
+
+        @include breakpoint($breakpoint-md) {
+            &:not(:nth-child(2)) {
+                display: none;
+            }
+
+            &:nth-child(2) {
+                margin-right: 0;
+            }
+        }
+
+        @include breakpoint($breakpoint-sm) {
+            &:nth-child(2) {
+                position: absolute;
+                top: -42px;
+                right: 90px;
+            }
         }
     }
 
@@ -18,5 +38,16 @@
         width: 18px;
         height: 18px;
         margin-bottom: 2px;
+
+        @include breakpoint($breakpoint-xl) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__text {
+        @include breakpoint($breakpoint-xl) {
+            display: none;
+        }
     }
 }

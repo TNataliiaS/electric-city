@@ -7,6 +7,16 @@
     border: 2px solid #DDDDDD;
     border-radius: 100px;
 
+    @include breakpoint($breakpoint-xl) {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    @include breakpoint($breakpoint-xs) {
+        padding-top: 6px;
+        padding-bottom: 7px;
+    }
+
     &__btn {
         width: 26px;
         height: 26px;
@@ -16,6 +26,12 @@
         background: none;
         border: none;
         cursor: pointer;
+
+        @include breakpoint($breakpoint-xs) {
+            width: 18px;
+            height: 18px;
+            margin-right: 6px;
+        }
     }
 
     &__btn-icon {
@@ -31,6 +47,22 @@
 
         &::placeholder {
             color: $content-color-second;
+
+            @include breakpoint($breakpoint-xs) {
+                font-size: 14px;
+            }
+        }
+
+        @include breakpoint($breakpoint-xl) {
+            width: 100%;
+        }
+
+        @include breakpoint($breakpoint-lg) {
+            width: 232px;
+        }
+
+        @include breakpoint($breakpoint-md) {
+            width: 100%;
         }
     }
 }

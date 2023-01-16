@@ -11,6 +11,7 @@
                 display: block;
 
                 background-repeat: no-repeat;
+                background-size: cover;
 
                 position: absolute;
                 top: 50%;
@@ -35,6 +36,15 @@
                 height: 17px;
 
                 background-image: url(../images/envelope.svg);
+
+                @include breakpoint($breakpoint-md) {
+                    width: 26px;
+                }
+
+                @include breakpoint($breakpoint-xs) {
+                    width: 18px;
+                    height: 11px;
+                }
             }
         }
     }

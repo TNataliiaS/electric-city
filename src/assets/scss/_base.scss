@@ -12,6 +12,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 *,
 *:before,
 *:after {
@@ -84,7 +88,11 @@ input, textarea, select, button {
 ================*/
 .container {
     width: 100%;
-    max-width: 1180px;
-    padding: 0 15px;
+    max-width: 1190px;
+    padding: 0 20px;
     margin: 0 auto;
+
+    @include breakpoint($breakpoint-xs) {
+        padding: 0 10px;
+    }
 }

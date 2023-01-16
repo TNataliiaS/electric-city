@@ -27,6 +27,13 @@
     &__location-item {
         @extend %flex-align-center;
 
+        transition: opacity .1s ease-in;
+
+        &:hover,
+        &:active {
+            opacity: .6;
+        }
+
         &--city {
             margin-right: 36px;
             padding: 0;

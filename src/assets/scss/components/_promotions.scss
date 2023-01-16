@@ -1,5 +1,5 @@
 .promotions {
-    padding-top: 36px;
+    padding-top: 31px;
     padding-bottom: 95px;
 
     @include breakpoint($breakpoint-lg) {
@@ -7,7 +7,7 @@
     }
 
     @include breakpoint($breakpoint-xs) {
-        padding-top: 25px;
+        padding-top: 20px;
         padding-bottom: 48px;
     }
 
@@ -58,8 +58,22 @@
         }
     }
 
+    &__banner-link {
+        &:hover .promotions__item-img {
+            transform: scale(1.05);
+        }
+
+        @include breakpoint($breakpoint-xs) {
+            &:hover .promotions__item-img {
+                transform: scale(1);
+            }
+        }
+    }
+
     &__item-img {
         width: 100%;
         object-fit: cover;
+
+        transition: transform .2s linear;
     }
 }

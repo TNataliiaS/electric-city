@@ -3,6 +3,13 @@
         width: 227px;
         height: 70px;
 
+        transition: opacity .1s ease-in;
+
+        &:hover,
+        &:active {
+            opacity: .6;
+        }
+
         @include breakpoint($breakpoint-xl) {
             width: 190px;
             height: 59px;

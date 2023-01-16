@@ -9,9 +9,12 @@
         margin-bottom: 15px;
     }
 
+    @include breakpoint($breakpoint-sm) {
+        margin-bottom: 64px;
+    }
+
     @include breakpoint($breakpoint-xs) {
         padding-top: 25px;
-        margin-bottom: 0;
     }
 
     &__nav {
@@ -61,6 +64,15 @@
             @include breakpoint($breakpoint-xs) {
                 margin-right: 25px;
             }
+        }
+    }
+
+    &__nav-link {
+        transition: opacity .1s ease-in;
+
+        &:hover,
+        &:active {
+            opacity: .6;
         }
     }
 
@@ -124,6 +136,13 @@
         font-size: 14px;
         line-height: 1.4;
         color: $content-color-second;
+
+        transition: opacity .1s ease-in;
+
+        &:hover,
+        &:active {
+            opacity: .6;
+        }
 
         span {
             text-transform: uppercase;

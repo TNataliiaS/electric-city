@@ -4,6 +4,13 @@
 
         position: relative;
 
+        transition: opacity .1s ease-in;
+
+        &:hover,
+        &:active {
+            opacity: .6;
+        }
+
         &--phone,
         &--mail {
             &:before {
